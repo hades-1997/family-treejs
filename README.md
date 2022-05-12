@@ -13,14 +13,14 @@ nodeBinding: thuộc tính 'name' dữ liệu sẽ được liên kết với ph
 + city: thành phố
 + country: thôn, xã
 
-#giới thiệu sơ đồ hoạt động
-family.load(
+# giới thiệu sơ đồ hoạt động.
+
+<pre>family.load(
     [
-        //gia phả gốc
+    
         { id: 1, pids: [3], gender: 'male', photo: 'https://cdn.balkan.app/shared/m60/2.jpg', name: 'Zeph Daniels', born: '1954-09-29' },
         { id: 2, pids: [3], gender: 'male', photo: 'https://cdn.balkan.app/shared/m60/1.jpg', name: 'Rowan Annable', born: '1952-10-10' },
         { id: 3, pids: [1, 2], gender: 'female', photo: 'https://cdn.balkan.app/shared/w60/1.jpg', name: 'Laura Shepherd', born: '1943-01-13', email: 'laura.shepherd@gmail.com', phone: '+44 845 5752 547', city: 'Moscow', country: 'ru' },
-        
         //Bố mẹ của Samson Stokes
         { id: 4, pids: [5], photo: 'https://cdn.balkan.app/shared/m60/3.jpg', name: 'Rowan Annable' },
         { id: 5, pids: [4], gender: 'female', photo: 'https://cdn.balkan.app/shared/w60/3.jpg', name: 'Lois Sowle' },
@@ -30,5 +30,6 @@ family.load(
         //con cái
         { id: 8, mid: 7, fid: 6, gender: 'female', photo: 'https://cdn.balkan.app/shared/w10/3.jpg', name: 'Celeste Castillo', born: '2021-02-01' },
         { id: 9, mid: 7, fid: 6, gender: 'female', photo: 'https://cdn.balkan.app/shared/w10/3.jpg', name: 'Celeste T', born: '2021-02-01' }
+        
     ]
-);
+);</pre>
