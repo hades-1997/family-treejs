@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: 100%;
+                font-family: Helvetica;
+                overflow: hidden;
+            }
+
+            #tree {
+                width: 100%;
+                height: 100%;
+            }
+    </style>
+</head>
+<body>
+    
+    <script src="https://balkan.app/js/FamilyTree.js"></script>
+    <div id="tree"/>
+    <script>
+        //JavaScript
+        var family = new FamilyTree(document.getElementById("tree"), {
+            mouseScrool: FamilyTree.action.none,
+           // scaleInitial: 0.3,
+            enableSearch: false,
+            nodeBinding: {
+                "field_0": "relation"
+            }
+        });
+        
+        family.load([
+            { id: 2, pids: [3], gender: 'female', relation: "grandmother" },
+            { id: 3, pids: [2], gender: 'male', relation: "grandfather" },
+            { id: 4, pids: [5], gender: 'male', fid: 3, mid: 2, relation: "father" },
+            { id: 5, pids: [4], gender: 'female', fid: 21, mid: 22, relation: "mother" },
+            { id: 6, pids: [10, 11, 12, 13], gender: 'male', fid: 4, mid: 5, relation: "son" },
+            { id: 7, gender: 'female', fid: 4, mid: 5, relation: "daughter" },
+            { id: 8, gender: 'male', fid: 4, mid: 5, relation: "son" },
+            { id: 9, gender: 'male', fid: 4, mid: 5, relation: "son"},
+            { id: 10, pids: [6], gender: 'female', relation: "wife" },
+            { id: 11, pids: [6], gender: 'female', relation: "wife" },
+            { id: 12, pids: [6], gender: 'female', relation: "wife" },
+            { id: 13, pids: [6], gender: 'female', relation: "wife" },
+            { id: 14, gender: 'female', fid: 6, mid: 13, relation: "child" },
+            { id: 15, gender: 'male', fid: 6, mid: 13, relation: "child" },
+            { id: 16, gender: 'female', fid: 6, mid: 13, relation: "child" },
+            { id: 17, gender: 'male', fid: 6, mid: 13, relation: "child" },
+            { id: 18, gender: 'female', fid: 6, mid: 12, relation: "child" },
+            { id: 19, pids: [20], gender: 'male', relation: "grand grandfather" },
+            { id: 20, pids: [19], gender: 'female', relation: "grand grandmother" },
+            { id: 21, pids: [22], gender: 'male', fid: 19, mid: 20, relation: "grandfather" },
+            { id: 22, pids: [21], gender: 'female', relation: "grandmother" }
+        ]);
+                                        
+    </script>
+</body>
+</html>
