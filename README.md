@@ -1,3 +1,5 @@
+# document
+https://balkan.app/FamilyTreeJS
 # family-treejs
 sơ đồ gia phả html js framework familly treejs
 nodeBinding: thuộc tính 'name' dữ liệu sẽ được liên kết với phần tử UI 'field_0' từ mẫu.
